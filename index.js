@@ -66,7 +66,7 @@ app.post('/run', async (req, res) => {
       },
       headers: {
           'content-type': 'application/json',
-          'X-RapidAPI-Key': '634df9aadbmsh329101d0c0302ffp13a668jsn9e1e39532786',
+          'X-RapidAPI-Key': '6cf9847e81mshee316bea0e7ad6dp1289a6jsn7a41c011db9d',
           'X-RapidAPI-Host': 'judge0-ce.p.rapidapi.com'
       },
       data: {
@@ -94,7 +94,7 @@ app.post('/run', async (req, res) => {
               fields: '*'
           },
           headers: {
-              'X-RapidAPI-Key': '634df9aadbmsh329101d0c0302ffp13a668jsn9e1e39532786',
+              'X-RapidAPI-Key': '6cf9847e81mshee316bea0e7ad6dp1289a6jsn7a41c011db9d',
               'X-RapidAPI-Host': 'judge0-ce.p.rapidapi.com'
           }
       };
