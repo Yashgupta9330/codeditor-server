@@ -8,9 +8,13 @@ const connection = require('./connection');
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(cors());
+const URL = 'http://localhost:5173'
 
-
+app.use(cors({
+  origin: URL,
+  methods: ["GET", "POST"],
+  credentials: true
+}));
 
 // Connect to the MySQL database
 connection.connect((err) => {
