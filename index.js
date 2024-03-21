@@ -8,15 +8,17 @@ const connection = require('./connection');
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-const URL = 'https://code-editor-gules-two.vercel.app'
-
-app.use(cors(
-  {
-  origin: URL,
-  methods: ["GET", "POST"],
-  credentials: true
+const allowedOrigins = ['https://code-editor-gules-two.vercel.app'];
+app.use(cors({
+  origin: function (origin, callback) {
+    // Check if the origin is allowed
+    if (!origin || allowedOrigins.includes(origin)) {
+      callback(null, true);
+    } else {
+      callback(new Error('Not allowed by CORS'));
+    }
   }
-));
+}));
 
 // Connect to the MySQL database
 connection.connect((err) => {
