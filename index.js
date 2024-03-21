@@ -21,7 +21,7 @@ app.use(cors({
 }));
 
 // Connect to the MySQL database
-connection.connect((err) => {
+connection.connect((err) =>{
   if (err) {
     console.error('Errorconnecting to MySQL database: ' + err.stack);
     return;
