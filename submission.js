@@ -27,9 +27,9 @@ console.log(username);
   const value= crypto.randomUUID();
   //const createdAtDate = new Date(submissionData.created_at);
   const times= new Date(time).toISOString().slice(0, 19).replace('T', ' ');
-
+  let val=Math.floor(Math.random()*100)+1;
   const values = [
-    52,
+    val,
     submissionData.token,
     username,
     submissionData.language.name,
