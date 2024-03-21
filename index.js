@@ -21,7 +21,7 @@ app.use(cors(
 // Connect to the MySQL database
 connection.connect((err) => {
   if (err) {
-    console.error('Error connecting to MySQL database: ' + err.stack);
+    console.error('Errorconnecting to MySQL database: ' + err.stack);
     return;
   }
   console.log('Connected to MySQL database as id ' + connection.threadId);
