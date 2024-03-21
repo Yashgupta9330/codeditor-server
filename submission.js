@@ -29,7 +29,7 @@ console.log(username);
   const times= new Date(time).toISOString().slice(0, 19).replace('T', ' ');
 
   const values = [
-    value,
+    52,
     submissionData.token,
     username,
     submissionData.language.name,
