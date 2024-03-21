@@ -8,12 +8,14 @@ const connection = require('./connection');
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-const URL = 'http://localhost:5173'
+const URL = 'https://code-editor-gules-two.vercel.app'
 
 app.use(cors(
-  /*origin: URL,
+  {
+  origin: URL,
   methods: ["GET", "POST"],
-  credentials: true*/
+  credentials: true
+  }
 ));
 
 // Connect to the MySQL database
